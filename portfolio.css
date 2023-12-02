@@ -1,0 +1,29 @@
+body
+{
+    /*
+    background: rgb(217,116,33);
+    background: linear-gradient(160deg, rgba(217,116,33,1) 0%, rgba(174,68,90,1) 12%, rgba(102,37,73,1) 35%, rgba(69,25,82,1) 80%); 
+    */
+    /*
+    background: rgb(181,101,36);
+    background: linear-gradient(160deg, rgba(144,51,71,1) 14%, rgba(108,25,71,1) 38%, rgba(63,13,78,1) 80%); 
+
+    color: #bfc1c2;
+    */
+
+    background-color: darkgray;
+}
+
+.content
+{
+    
+
+}
+
+.menu
+{
+    height: 100vh;
+    /*background-color: rgba(181,101,36, 20%);*/
+    background-color: gray;
+    
+}
