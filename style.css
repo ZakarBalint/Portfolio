@@ -1,0 +1,196 @@
+:root
+{
+    --main-bg-color: rgba(69, 65, 144, 75%);
+    --main-text: #efbf95;
+    --sec-text: #ab5c92;
+}
+
+body
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--main-text);
+    font-family: sans-serif;
+}
+
+/*Telefon nézet*/
+@media (max-width: 575px) {
+    body
+    {
+        background-image: url(resource/images/mobile_bg.jpeg);
+        font-size: 1rem;
+    }
+
+    #menu
+    {
+        width: 60vw;
+        transform: translateX(-100%);
+        transition: transform 300ms ease-out;
+    }
+}
+
+/*Tablet nézet*/
+@media (min-width: 576px) {
+    body
+    {
+        background-image: url(resource/images/desktop_bg.png);
+        font-size: 1.2rem;      
+    }
+
+    #menu
+    {
+        width: 60vw;
+
+        transform: translateX(-100%);
+        transition: transform 300ms ease-out;
+    }
+}
+
+/*Laptop, asztali nézet*/
+@media (min-width: 1200px) {
+    body
+    {
+        background-image: url(resource/images/desktop_bg.png);
+        font-size: 1.4rem;   
+    }
+
+    #menu-button
+    {
+        display: none;
+    }
+}
+
+#menu
+{
+    height: 100svh;
+    display: block;
+    position: fixed;
+    backdrop-filter: blur(.5rem);
+}
+
+#menu-button
+{
+    width: 2rem;
+    aspect-ratio: 1;
+    position: fixed;
+    background-image: url(resource/icons/bars-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: 0;
+    margin: 1rem;
+    z-index: 10000;   
+}
+
+#menu[data-opened="true"]
+{
+    transform: translateX(0%);
+}
+
+#menu-button[data-opened="true"]
+{
+    background-image: url(resource/icons/xmark-solid.svg);
+}
+
+#landing
+{
+    padding-top: 20svh;
+}
+/*
+.hidden
+{
+    transform: translateX(100%);
+    opacity: 0;
+    filter: blur(1rem);
+    transition: all .5s ease-out;
+}*/
+
+.show
+{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: all .5s ease-out;
+}
+
+
+.szoveg
+{
+    text-align: justify;
+    margin: auto;
+}
+
+#sajatkep
+{
+    width: 80%;
+    max-width: 20rem;
+    margin: auto;
+    display: flex;
+    border: .5rem solid var(--main-bg-color);
+    border-radius: 1rem;
+}
+
+.project
+{
+    min-height: 100px;
+    margin: 1rem;
+    border-radius: 1rem;
+
+}
+
+.m-0
+{
+    margin: 0;
+}
+
+.nav-link
+{
+    color: var(--main-text);
+}
+
+.nav-link:hover
+{
+    color: var(--sec-text);
+}
+
+.content
+{
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: var(--main-bg-color);
+    backdrop-filter: blur(.5rem);
+}
+
+.social-svg
+{
+    width: 1.5rem;
+    aspect-ratio: 1;
+}
+
+/*scrollbar beállítások*/
+/*firefox*/
+@supports(scrollbar-color: red blue)
+{
+    *
+    {
+        scrollbar-color: #ab5c92 var(--main-bg-color);
+        scrollbar-width: thin;
+    }
+}
+
+/*összes többi*/
+::-webkit-scrollbar{
+    width: 0.75em;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--main-bg-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ab5c92;
+}
+
