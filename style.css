@@ -98,14 +98,14 @@ body
 {
     padding-top: 20svh;
 }
-/*
+
 .hidden
 {
     transform: translateX(100%);
     opacity: 0;
     filter: blur(1rem);
     transition: all .5s ease-out;
-}*/
+}
 
 .show
 {
